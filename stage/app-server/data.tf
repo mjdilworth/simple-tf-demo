@@ -14,8 +14,8 @@ data "template_file" "app_install" {
   template = "${file("${path.module}/template_files/install.tpl")}"
 
   vars {
-    version= "${var.version}"
-    os = "${var.os}"
-    arch = "${var.arch}"
+    version = "${var.version}"
+    os      = "${var.os}"
+    arch    = "${var.arch}"
   }
 }

@@ -7,6 +7,5 @@ output "elb_sg_id" {
 }
 
 output "elb_dns_name" {
-
   value = "${aws_elb.app_elb.dns_name}"
 }

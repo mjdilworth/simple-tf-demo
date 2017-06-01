@@ -1,8 +1,10 @@
 module "vpc" {
-  source = "git::git@github.com:mjdilworth/tf-modules.git//modules//vpc?ref=v0.1"
-  region = "${var.region}"
-  vpc_cidr_block = "${var.vpc_cidr_block}"
+  source             = "git::git@github.com:mjdilworth/tf-modules.git//modules//vpc?ref=v0.1"
+  region             = "${var.region}"
+  vpc_cidr_block     = "${var.vpc_cidr_block}"
   public_subnet_cidr = "${var.public_subnet_cidr}"
+  name_tag           = "${var.environment}"
+  number_public_subnets = "${var.region_az_number}"
 }
 
 resource "aws_launch_configuration" "lc" {
@@ -33,7 +35,7 @@ resource "aws_autoscaling_group" "asg" {
   launch_configuration = "${aws_launch_configuration.lc.name}"
 
   vpc_zone_identifier = [
-    "${module.vpc.public_subnet_ids}"
+    "${module.vpc.public_subnet_ids}",
   ]
 
   force_delete     = "${var.force_delete}"

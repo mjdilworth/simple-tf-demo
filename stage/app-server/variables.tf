@@ -71,7 +71,7 @@ variable "vpc_cidr_block" {
 }
 
 variable "public_subnet_cidr" {
-  type = "list"
+  type        = "list"
   description = "List of CIDR block for the public subnets in eu-west-1a, b and c"
 }
 
