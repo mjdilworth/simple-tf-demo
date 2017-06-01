@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "git@github.com:mjdilworth/tf-modules.git//vpc?ref=v0.1"
+  source = "git::git@github.com:mjdilworth/tf-modules.git//modules//vpc?ref=v0.1"
   region = "${var.region}"
   vpc_cidr_block = "${var.vpc_cidr_block}"
   public_subnet_cidr = "${var.public_subnet_cidr}"

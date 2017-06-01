@@ -1,11 +1,11 @@
 region = "eu-west-2"
 vpc_cidr_block = "10.100.0.0/16"
 public_subnet_cidr = ["10.100.0.0/20" ,"10.100.16.0/20","10.100.32.0/20"]
-environment = "tooling-env"
+environment = "demo-env"
 associate_public_ip_address = "true"
 ebs_optimized = "false"
 instance_type = "t2.micro"
-key_name = "myj-key"
+key_name = "mjd-key"
 root_volume_size = "10"
 force_delete = "false"
 desired_capacity = 2
