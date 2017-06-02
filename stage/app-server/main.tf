@@ -14,8 +14,8 @@ resource "aws_launch_configuration" "lc" {
   }
 
   name                        = "lc-${var.environment}"
-  /* dont use public IP
-  associate_public_ip_address = "${var.associate_public_ip_address}" */
+  /* dont use public IP */
+  associate_public_ip_address = "${var.associate_public_ip_address}"
   ebs_optimized               = "${var.ebs_optimized}"
   image_id                    = "${data.aws_ami.rhel7_ami.id}"
   instance_type               = "${var.instance_type}"
