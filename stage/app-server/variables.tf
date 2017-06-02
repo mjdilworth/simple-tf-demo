@@ -2,6 +2,10 @@ variable "region" {
   description = "AWS region"
 }
 
+variable "region_az_number" {
+  description = "Number of AZ in region"
+}
+
 variable "environment" {
   description = "The name of the environment"
 }

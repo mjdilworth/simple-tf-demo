@@ -1,8 +1,10 @@
 region = "eu-west-2"
 region_az_number = 2
+/* networking needs sorting out as its too large - use /24 for subnets and supernet these and only 2 for London */
 vpc_cidr_block = "10.100.0.0/16"
 public_subnet_cidr = ["10.100.0.0/20" ,"10.100.16.0/20","10.100.32.0/20"]
 environment = "staging"
+/* should set this to false or remove as defult is false */
 associate_public_ip_address = "true"
 ebs_optimized = "false"
 instance_type = "t2.micro"
