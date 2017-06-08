@@ -14,12 +14,12 @@ resource "aws_launch_configuration" "lc" {
   }
 
   name                        = "lc-${var.environment}"
-  /* dont use public IP 
+  /* dont use public IP
   associate_public_ip_address = "${var.associate_public_ip_address}"*/
   ebs_optimized               = "${var.ebs_optimized}"
   image_id                    = "${data.aws_ami.rhel7_ami.id}"
   instance_type               = "${var.instance_type}"
-  /* try without a key as i dont need to access the compute
+  /* use without a key as i dont need to access the compute
   key_name                    = "${var.key_name}" */
   security_groups             = ["${aws_security_group.app_security_group.id}"]
   user_data                   = "${data.template_file.app_install.rendered}"
