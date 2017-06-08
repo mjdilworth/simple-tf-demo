@@ -21,11 +21,11 @@ variable "ebs_optimized" {
 variable "instance_type" {
   description = "The size of instance to launch"
 }
-
+/*
 variable "key_name" {
   description = "The key name that should be used for the instance"
 }
-
+*/
 variable "root_volume_size" {
   description = "The size of the volume in gigabytes"
 }
