@@ -1,5 +1,8 @@
 # simple-tf-demo
-A simple terraform demo
+A simple terraform demo to create this:
+![architecture](demo-tf.png)
+
+
 
 ## Usage ##
 Prior to cloning this source code and running terraform plan or apply, you need to provide AWS credentials and the region
