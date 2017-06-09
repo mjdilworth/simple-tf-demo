@@ -22,6 +22,7 @@ $ terraform plan
 $ terraform apply
 ```
 N.B - run terraform get with `-update` flag if you have made changes to `vpc` module after initial run.
+The modules are located here https://github.com/mjdilworth/tf-modules you dont need to download them as the terraform get command does this, but you can clone the repo.
 OR
 
 passing them as command line variables when running terraform plan or apply e.g.
@@ -36,6 +37,7 @@ There are other ways of providing AWS credentials for authentications - see [her
 ## Access the Application ##
 Open a web browser and go to this URL:
 ```
+The DNS name of the ELB will be displayed in your terminal as an output from the terraform apply command
 http://${elb_dns_name}:8080
 ```
 ## Demonstrates ##
