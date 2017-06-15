@@ -15,7 +15,7 @@ $ export AWS_ACCESS_KEY_ID=xxxxx
 $ export AWS_SECRET_ACCESS_KEY=xxxxx
 
 
-$ git clone https://github.com/mjdilworth/simple-tf-app.git
+$ git clone https://github.com/mjdilworth/simple-tf-demo.git
 $ cd stage/app-server
 $ terraform get
 $ terraform plan
